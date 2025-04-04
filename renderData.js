@@ -1,3 +1,5 @@
+// renderData.js
+
 import content from "./api/index.js";
 
 const box = document.querySelector("#custom_box");
@@ -29,9 +31,9 @@ if (Array.isArray(inputData)) {
     const titleContent = item.title
       ? `<p class="card-text">${item.title}</p>`
       : "";
-    return `<div class="col">
-      <div class="card shadow-sm">
-        <img src=${item.path} width="100%" height="100%" alt="image"/>
+    return `<div class="col-12 col-sm-6 col-md-4">
+      <div class="card shadow-sm h-100">
+        <img src=${item.path} class="img-fluid" alt="image"/>
         <div class="card-body">${titleContent}
           <div class="d-flex justify-content-center align-items-center">
               <button type="button" class="btn btn-sm btn-primary w-75"  data-path="${item.path}" onclick="handleOpenModal(this)">Просмотр</button>
